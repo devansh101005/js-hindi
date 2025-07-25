@@ -28,6 +28,8 @@ const myFunction =function () {
     console.log("Hello World");
 }
 
+//non primitive ka return type hamehsa object hi aata hai
+
 
 
  
