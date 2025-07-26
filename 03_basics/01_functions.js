@@ -25,3 +25,27 @@ function loginUserMessage(username) {
 
 console.log(loginUserMessage())//undefined just logged in
 
+
+
+
+//shopping cart  
+//we dont know here kitne parametres aa rhe hain
+
+function calculateCartPrice(...num1) {  //... is rest operator  or haan ... ko hi spread operator bola jaata hai //ti it means use case pe dend krega kimkya bolegein 
+    return num1
+
+}
+console.log(calculateCartPrice(200,300,400))
+
+
+//object in function
+
+const user = {
+    username:"Hitesh",
+    price:199
+}
+function handleObject(anyObject) {
+    console.log(`Usename is ${anyObject.username} and price is ${anyObject.price}`)
+}
+
+
