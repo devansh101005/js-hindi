@@ -31,7 +31,23 @@ const obj1 = { 1:"a",2:"b"}
 const obj2 = {3:"a",4:"b"}
 
 const obj3=Object.assign({},obj1,obj2)  //parenthesis lgao ya nalgao koi zaroorat ni but lgana theek rehta hai //read in documentation for more
+const obj4 = {...obj1,...obj2}//isse bhi combine ho skta hai  //jyada yhi syntax use hota hai
 console.log(obj3)
+
+//also seee this
+
+//imagine we want keys of object
+
+console.log(Object.keys(tinderUser));  //iska output type array hai yaad kar lo 
+
+console.log(Object.entries(tinderUser));
+
+
+//kabhi kabhi object k through loop karke calue nikaalte hain but kabi kabhi wo value exist nhi karti yo iuske liye
+
+//we can ask kya value hai
+console.log(tinderUser.hasOwnProperty('isLoggedIn'))
+
 
 
 
