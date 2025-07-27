@@ -13,7 +13,7 @@
 //()() // iife ka syntax
 
 //but isko ham arrow function i tarah bhi to likh skte hain
-  ( function aurcode()    {
+  ( function aurcode()    {  //this is named iife
     console.log(`DB CONNECTED`);
   })();
 
@@ -22,3 +22,8 @@
   (() =>{
     console.log(`DB connected`);
   }) ()
+
+  //How to write unnamed iife 
+((name) => {
+    console.log(`DB CONNECTED TWO ${name}`)
+}) (`hitesh`)
