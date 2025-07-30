@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events</title>
+</head>
+<body style ="background-color: black;">
+    <h2>Amazing images</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""  ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+//js mai jitne bhi events hote hain wo sequentially hi run hote hain 
+
+//how to apply onclick
+
+<script>
+    
+//  document.getElememtById('owl').onClick=function(){ //This approach is not thst good 
+//  alert("Owl clicked")
+//  }
+
+// document.getElementById("owl").addEventListener('click', function(){
+// alert("Owl clicked again")
+// },
+// false)                             //false is used bcoz kai application mai bina false k wo complete hi ni hoti
+
+
+//attachEvent  bhi hota hai ek
+
+//event object (e)
+
+// document.getElementById("images").addEventListener('click', function(e) {
+//     console.log("clicked ul");
+// }, false);
+
+// document.getElementById("owl").addEventListener('click', function(e) {
+//     console.log("clicked owl");
+// }, false);
+
+//ye event propogation hai ..bubbling  ho rhi ...phle own pe click fir ul yaani ki images pe click
+//but agar capturing lga dein to ulta hoga 
+//capturing matlab false ki jagah true lgana 
+
+//but agar event bubbbling stop krna bai to 
+//e.stopPropogation() lga do consolle.log k baad 
+
+//what to styudy
+//type ,timestamp ,defaultPrevented,target,toElememt ,srcElememt,currentTarget 
+//clientX,screenY,ScreeenX
+//altKey,ctrlKey ,ahiftKey,keyCode   ye sab cheeze padhna interview k liye important hai
+
+// document.getElementById('google').addEventListener
+// ("click",function(e){
+//     console.log("google clicked")
+//     e.preventDefault()
+// },false)
+
+document.querySelector('#images').addEventListener
+("click",function(e){
+console.log(e.target.parentNode);  //use tagname and ifelse 
+//how to remove it
+let remove=e.target.parentNode
+// remove.remove()
+
+//other way to do
+// remove.parentNode.removeChild(remove)
+})
+
+
+</script>
+</html>
