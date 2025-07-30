@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur code DOM</title>
+</head>
+<body style ="background-color: black; color: aliceblue;">
+    <ul class ="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang) {
+        const li=document.createElement('li');
+        li.innerHTML= `${lang}`
+        document.querySelector(`.language`).
+        appendChild(li)
+    }
+    addLanguage("python")
+
+    //adding language in optimized way
+
+    function addLang(langName) {
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addLang('goLang')
+
+    //editing the value 
+
+    const secondLang=document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML="mojo"  //tis is less optimizeda approach
+    const newli=document.createElement('li')
+    newli.textContent="mojo"
+    secondLang.replaceWith(newli)
+
+    //remove
+
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove()
+
+
+
+</script>
+</html>
+
+//to run these files -- npx serve 06_dom
