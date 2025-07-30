@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code </h1>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    //setTimeout
+    //its a method jo api ko bhi call krta hai 
+    //ye core js k part ni hai 
+    //in setTimeout handler ek function hai jiska naam ni hai 
+    //  setTimeout(function(){
+        //console.log("Devansh")
+    //},2000)
+
+    const sayDevansh =function(){
+        console.log("Devansh");
+    }
+    const changeText =function(){
+    document.querySelector('h1').innerHTML
+    = "best js series" 
+    } // i want to be printed it after 2 seconds
+
+
+    //setTimeout(sayDevansh,2000)
+      const changeMe=setTimeout(changeText,
+      2000)
+     //imagine 2 second k andar hi hame rokna ghai ki wo change na ho
+     document.querySelector('#stop').
+     addEventListener('click', function() {
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+     })
+
+
+</script>
+</html>
