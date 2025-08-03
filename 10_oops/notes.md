@@ -24,4 +24,6 @@ Encapsulation,  /means ek wrapper type ka bna do
 Inheritance,
 Polymorphism  //ek hi method kai kaam kar deta hai
 
-##Lets discuss 
+##Lets discuss
+
+ ![alt text](image-1.png)
